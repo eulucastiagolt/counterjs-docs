@@ -9,7 +9,7 @@ export default defineConfig({
 	adapter: vercel({
 		edgeMiddleware: true
 	}),
-	site: 'https://counterjs-docs.vercel.app',
+	// site: 'https://counterjs-docs.vercel.app',
 	integrations: [
 		starlight({
 			title: 'CounterJS',

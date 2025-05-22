@@ -5,6 +5,30 @@ description: Histórico de mudanças e atualizações do CounterJS
 
 # Registro de Alterações
 
+## [3.0.2] - 22/05/2025
+### 🐛 Correções
+- Corrigido o comportamento dos separadores vazios
+  - Agora, quando `data-counterjs-time-separator=""` for definido, o separador de tempo não será exibido
+  - O mesmo se aplica a `data-counterjs-date-separator` e `data-counterjs-datetime-separator`
+  - Valores padrão dos separadores alterados para vazio (`''`) em vez de espaços ou dois pontos
+
+### 🛠 Melhorias
+- Melhor tratamento de valores vazios para os separadores
+- Código mais consistente na renderização dos separadores
+
+### Como usar
+Para remover os separadores:
+```html
+<div data-counterjs
+     data-counterjs-date="31/12/2025 23:59:59"
+     data-counterjs-time-separator=""
+     data-counterjs-date-separator=""
+     data-counterjs-datetime-separator="">
+    Loading...
+</div>
+```
+
+
 ## [3.0.1] - 22/05/2025
 ### 🌐 Internacionalização
 - Todo o conteúdo traduzido para inglês

@@ -5,6 +5,30 @@ description: History of changes and updates to CounterJS
 
 # Changelog
 
+## [3.0.2] - 2025-05-22
+### 🐛 Bug Fixes
+- Fixed behavior of empty separators
+  - Now, when `data-counterjs-time-separator=""` is set, the time separator won't be displayed
+  - The same applies to `data-counterjs-date-separator` and `data-counterjs-datetime-separator`
+  - Default separator values changed to empty (`''`) instead of spaces or colons
+
+### 🛠 Improvements
+- Better handling of empty values for separators
+- More consistent code in separator rendering
+
+### How to Use
+To remove separators:
+```html
+<div data-counterjs
+     data-counterjs-date="31/12/2025 23:59:59"
+     data-counterjs-time-separator=""
+     data-counterjs-date-separator=""
+     data-counterjs-datetime-separator="">
+    Loading...
+</div>
+```
+
+
 ## [3.0.1] - 2025-05-22
 ### 🌐 Internationalization
 - Translated all content to English

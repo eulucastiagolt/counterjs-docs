@@ -1,23 +1,28 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://eulucastiagolt.github.io',
 	base: '/counterjs',
+	output: 'static',
+	adapter: vercel({
+		edgeMiddleware: true
+	}),
 	integrations: [
 		starlight({
 			title: 'CounterJS',
 			description: 'A lightweight and powerful library for creating countdown timers in JavaScript',
 			social: [
-				{ 
-					icon: 'github', 
+				{
+					icon: 'github',
 					label: 'GitHub',
 					href: 'https://github.com/eulucastiagolt/counterjs'
 				}
 			],
-			
+
 			// Internationalization configuration
 			locales: {
 				// English as the default language

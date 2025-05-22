@@ -49,6 +49,11 @@ export default defineConfig({
 					translations: { 'pt-br': 'API' }
 				},
 				{
+					label: 'Changelog',
+					link: '/changelog',
+					translations: { 'pt-br': 'Registro de Alterações' }
+				},
+				{
 					label: 'Examples',
 					slug: 'guides/example',
 					translations: { 'pt-br': 'Exemplos' }
